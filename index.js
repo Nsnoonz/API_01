@@ -1,5 +1,3 @@
-'use strict'
-
 import * as appConfig from './configs/app.js'
 import app from './configs/express.js'
 
