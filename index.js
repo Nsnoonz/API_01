@@ -8,3 +8,4 @@ server = app.listen(appConfig.port, () => {
 })
 
 server.timeout = 1800000
+export default app
