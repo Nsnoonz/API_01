@@ -8,7 +8,8 @@ const Database = {
       query.sql = `
       SELECT * FROM admin WHERE 1
       `
-      let result = await dbConn.myExec(query)
+      //let result = await dbConn.myExec(query)
+      const result = [{'status': 'success'}]
       return result
     } catch (error) {
       throw error

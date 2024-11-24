@@ -1,5 +1,3 @@
-'use strict'
-
 import * as appConfig from './configs/app.js'
 import app from './configs/express.js'
 
@@ -10,3 +8,4 @@ server = app.listen(appConfig.port, () => {
 })
 
 server.timeout = 1800000
+export default app

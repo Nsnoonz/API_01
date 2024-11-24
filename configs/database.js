@@ -7,9 +7,9 @@ const dbConn = {
 	user: process.env.DB_USER,
 	password: process.env.DB_PASS,
 	database: process.env.MYSQL_DB,
-	connectionLimit: 10
+	connectionLimit: 1000000
 }
-
+console.log(dbConn)
 const dbConnect = {
 	async myExec(query) {
     let result
