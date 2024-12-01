@@ -34,10 +34,10 @@ const Business = {
       await body('username').notEmpty().run(req)
       await body('password').notEmpty().run(req)
       validatorEndpoint(req, res)
-      if (req.body.username === process.env.Dev_USER && req.body.password === process.env.Dev_Pass) {
+      if (req.body.username === process.env.Dev_USER && req.body.password === process.env.Dev_PASS) {
         return generatoken(req.body.username)
       } else {
-        const err = Object.assign(new Error(`Data Unauthorized ${req.body.username} ${process.env.Dev_USER} ${req.body.password} ${process.env.Dev_Pass}`), { status: 401 })
+        const err = Object.assign(new Error(`Data Unauthorized ${req.body.username} ${process.env.Dev_USER} ${req.body.password} ${process.env.Dev_PASS}`), { status: 401 })
         throw err
       }
     } catch (error) {
