@@ -16,8 +16,8 @@ const transporter = nodemailer.createTransport({
   port: 587,
   secure: false,
   auth: {
-      user: process.env.Mail_User,
-      pass: process.env.Mail_PASS,
+    user: process.env.Mail_User,
+    pass: process.env.Mail_PASS,
   },
 });
 const Business = {
@@ -34,7 +34,7 @@ const Business = {
       await body('username').notEmpty().run(req)
       await body('password').notEmpty().run(req)
       validatorEndpoint(req, res)
-      if(req.body.username === process.env.Dev_USER && req.body.password === process.env.Dev_Pass){
+      if (req.body.username === process.env.Dev_USER && req.body.password === process.env.Dev_Pass) {
         return generatoken(req.body.username)
       } else {
         const err = Object.assign(new Error('Data Unauthorized'), { status: 401 })
