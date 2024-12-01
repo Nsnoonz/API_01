@@ -5,8 +5,8 @@ const Main = {
     try {
       const result =  /* await business.bfnDemo(req, res) */
         result = {
-          Dev_USER,
-          Dev_PASS
+          Dev_USER: process.env.Dev_USER,
+          Dev_PASS: process.env.Dev_PASS
         }
       res.success(result)
     } catch (error) {
