@@ -26,6 +26,6 @@ jobs:
         with:
           args: >
             -Dsonar.host.url=https://sonarcloud.io
-            -Dsonar.organization=YOUR_ORG_KEY
-            -Dsonar.projectKey=YOUR_PROJECT_KEY
+            -Dsonar.organization=nsnoonz
+            -Dsonar.projectKey=Nsnoonz_API_01
             -Dsonar.verbose=true
